@@ -3,15 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Infographic và video về lợi ích của công nghệ số trong học tập.">
-  <title>Lợi ích của công nghệ số</title>
+  <meta name="description" content="Trang giới thiệu thông tin cá nhân và các sản phẩm thực hiện trong Lab05.">
+  <title>Giới thiệu cá nhân | Lab05</title>
   <style>
     :root {
       color-scheme: light;
       --ink: #183452;
       --muted: #52677b;
       --accent: #147d80;
+      --accent-dark: #0e6265;
       --paper: #f3f8f7;
+      --surface: #fff;
       --line: #dce8e6;
     }
 
@@ -27,19 +29,16 @@
       line-height: 1.6;
     }
 
+    .container {
+      width: min(100% - 2rem, 960px);
+      margin-inline: auto;
+    }
+
     header {
-      padding: clamp(2.5rem, 7vw, 4.5rem) 1rem 2.25rem;
+      padding: clamp(2.5rem, 7vw, 4rem) 0;
       background: linear-gradient(135deg, #e3f3ef, #f3f8f7 72%);
       border-bottom: 1px solid var(--line);
       text-align: center;
-    }
-
-    header > div,
-    main,
-    footer {
-      width: min(100%, 900px);
-      margin-inline: auto;
-      padding-inline: 1.25rem;
     }
 
     h1 {
@@ -58,30 +57,75 @@
     main {
       display: grid;
       gap: 2rem;
-      padding-block: 2.25rem;
+      padding-block: 2rem;
+    }
+
+    section {
+      min-width: 0;
     }
 
     h2 {
-      margin: 0 0 0.85rem;
-      font-size: 1.35rem;
+      margin: 0 0 1rem;
+      font-size: 1.4rem;
     }
 
-    figure {
+    .profile,
+    .product-card {
+      padding: 1.25rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      box-shadow: 0 4px 16px rgb(24 52 82 / 5%);
+    }
+
+    .profile {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .profile-item {
       margin: 0;
     }
 
-    .infographic {
+    .profile-item dt {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .profile-item dd {
+      margin: 0.25rem 0 0;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .product-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .product-card p {
+      margin: 0 0 1rem;
+      color: var(--muted);
+    }
+
+    .product-card img {
       display: block;
       width: 100%;
       height: auto;
       border: 1px solid var(--line);
-      background: #fff;
+      border-radius: 8px;
     }
 
-    figcaption {
-      margin-top: 0.5rem;
-      color: var(--muted);
-      font-size: 0.9rem;
+    .product-card--video {
+      grid-column: 1 / -1;
     }
 
     .video-frame {
@@ -89,6 +133,7 @@
       width: 100%;
       aspect-ratio: 16 / 9;
       overflow: hidden;
+      border-radius: 8px;
       background: #14232f;
     }
 
@@ -100,79 +145,109 @@
       border: 0;
     }
 
+    a {
+      color: var(--accent-dark);
+      font-weight: 600;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
     footer {
-      padding-block: 1.25rem 2rem;
+      padding-block: 1rem 2rem;
       border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 0.9rem;
-      overflow-wrap: anywhere;
+      text-align: center;
     }
 
     footer p {
-      margin: 0.35rem 0;
+      margin: 0;
     }
 
-    footer a {
-      color: var(--accent);
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding-top: 2.25rem;
+    @media (max-width: 640px) {
+      .profile,
+      .products {
+        grid-template-columns: 1fr;
       }
 
-      main {
-        gap: 1.5rem;
-        padding-block: 1.5rem;
-      }
-
-      h2 {
-        font-size: 1.2rem;
+      .product-card--video {
+        grid-column: auto;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div>
-      <h1>Lợi ích của công nghệ số</h1>
-      <p>Cùng tìm hiểu cách công nghệ số giúp tiếp cận kiến thức, học trực tuyến, cộng tác và quản lý thời gian hiệu quả hơn.</p>
+    <div class="container">
+      <h1>GIỚI THIỆU CÁ NHÂN</h1>
+      <p>Thông tin sinh viên và các sản phẩm đã thực hiện trong Lab05.</p>
     </div>
   </header>
 
-  <main>
-    <section aria-labelledby="infographic-heading">
-      <h2 id="infographic-heading">Infographic</h2>
-      <figure>
-        <img
-          class="infographic"
-          src="infographic.png"
-          alt="Infographic về năm lợi ích của công nghệ số trong học tập: tiếp cận kiến thức, học trực tuyến, làm việc nhóm, hỗ trợ bằng AI và quản lý thời gian."
-        >
-        <figcaption>Năm lợi ích của công nghệ số trong học tập.</figcaption>
-      </figure>
+  <main class="container">
+    <section aria-labelledby="profile-heading">
+      <h2 id="profile-heading">Thông tin cá nhân</h2>
+      <div class="profile">
+        <dl class="profile-item">
+          <dt>Họ và tên</dt>
+          <dd>[Trịnh Lữ Gia Phú]</dd>
+        </dl>
+        <dl class="profile-item">
+          <dt>MSSV</dt>
+          <dd>[B2605456]</dd>
+        </dl>
+        <dl class="profile-item">
+          <dt>Lớp học phần</dt>
+          <dd>[CT005]</dd>
+        </dl>
+      </div>
     </section>
 
-    <section aria-labelledby="video-heading">
-      <h2 id="video-heading">Video YouTube</h2>
-      <div class="video-frame">
-        <iframe
-          src="https://www.youtube.com/embed/c08d2Ryaym8"
-          title="Video YouTube về lợi ích của công nghệ số"
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+    <section aria-labelledby="work-heading">
+      <h2 id="work-heading">Sản phẩm Lab05</h2>
+      <div class="products">
+        <article class="product-card">
+          <h3>Nhiệm vụ 1.2 — Tệp PDF</h3>
+          <p>Bài làm nhiệm vụ 1.2 được lưu dưới dạng PDF.</p>
+          <a href="Lab05_Ex1.2.pdf.pdf" target="_blank" rel="noopener">
+            Mở file PDF nhiệm vụ 1.2
+          </a>
+        </article>
+
+        <article class="product-card">
+          <h3>Nhiệm vụ 2.1 — Hình ảnh PNG</h3>
+          <p>Hình ảnh sản phẩm được hiển thị trực tiếp bên dưới.</p>
+          <img
+            src="Lab05_Ex2.1.png.png"
+            alt="Sản phẩm PNG thực hiện trong nhiệm vụ 2.1 của Lab05"
+          >
+        </article>
+
+        <article class="product-card product-card--video">
+          <h3>Nhiệm vụ 2.2 — Video YouTube</h3>
+          <p>Video được nhúng trực tiếp từ YouTube.</p>
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/c08d2Ryaym8"
+              title="Video YouTube nhiệm vụ 2.2 của Lab05"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </article>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026. Bản quyền hình ảnh và nội dung thuộc về chủ sở hữu tương ứng.</p>
-    <p>Nguồn infographic: tệp infographic.png (ghi chú trên ảnh: Canva AI và Unsplash, theo Unsplash License).</p>
-    <p>Nguồn video: <a href="https://youtu.be/c08d2Ryaym8">YouTube</a>.</p>
-    <p>Mã HTML được hỗ trợ tạo bởi GitHub Copilot.</p>
+    <div class="container">
+      <p>Trang giới thiệu cá nhân — Bài thực hành Lab05</p>
+    </div>
   </footer>
 </body>
 </html>
