@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Infographic và video về lợi ích của công nghệ số trong học tập.">
+  <title>Lợi ích của công nghệ số</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #183452;
+      --muted: #52677b;
+      --accent: #147d80;
+      --paper: #f3f8f7;
+      --line: #dce8e6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: clamp(2.5rem, 7vw, 4.5rem) 1rem 2.25rem;
+      background: linear-gradient(135deg, #e3f3ef, #f3f8f7 72%);
+      border-bottom: 1px solid var(--line);
+      text-align: center;
+    }
+
+    header > div,
+    main,
+    footer {
+      width: min(100%, 900px);
+      margin-inline: auto;
+      padding-inline: 1.25rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      line-height: 1.15;
+    }
+
+    header p {
+      max-width: 620px;
+      margin: 1rem auto 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    main {
+      display: grid;
+      gap: 2rem;
+      padding-block: 2.25rem;
+    }
+
+    h2 {
+      margin: 0 0 0.85rem;
+      font-size: 1.35rem;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    .infographic {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #14232f;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    footer {
+      padding-block: 1.25rem 2rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+      overflow-wrap: anywhere;
+    }
+
+    footer p {
+      margin: 0.35rem 0;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding-top: 2.25rem;
+      }
+
+      main {
+        gap: 1.5rem;
+        padding-block: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Lợi ích của công nghệ số</h1>
+      <p>Cùng tìm hiểu cách công nghệ số giúp tiếp cận kiến thức, học trực tuyến, cộng tác và quản lý thời gian hiệu quả hơn.</p>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="infographic-heading">
+      <h2 id="infographic-heading">Infographic</h2>
+      <figure>
+        <img
+          class="infographic"
+          src="infographic.png"
+          alt="Infographic về năm lợi ích của công nghệ số trong học tập: tiếp cận kiến thức, học trực tuyến, làm việc nhóm, hỗ trợ bằng AI và quản lý thời gian."
+        >
+        <figcaption>Năm lợi ích của công nghệ số trong học tập.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="video-heading">
+      <h2 id="video-heading">Video YouTube</h2>
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/c08d2Ryaym8"
+          title="Video YouTube về lợi ích của công nghệ số"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026. Bản quyền hình ảnh và nội dung thuộc về chủ sở hữu tương ứng.</p>
+    <p>Nguồn infographic: tệp infographic.png (ghi chú trên ảnh: Canva AI và Unsplash, theo Unsplash License).</p>
+    <p>Nguồn video: <a href="https://youtu.be/c08d2Ryaym8">YouTube</a>.</p>
+    <p>Mã HTML được hỗ trợ tạo bởi GitHub Copilot.</p>
+  </footer>
+</body>
+</html>
